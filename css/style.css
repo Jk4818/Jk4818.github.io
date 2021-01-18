@@ -1,0 +1,609 @@
+body{
+    height: 800vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #0D1113;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+ul a{
+    text-decoration: none;
+}
+
+
+button{
+    font-family: 'Source Code Pro';
+    background-color: #0D1113;
+    box-shadow: 6px 5px rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor:pointer;
+    
+    animation: shake 5s cubic-bezier(.36,.07,.19,.97) infinite;
+
+    transition: all 0.2s ease-in-out;
+}
+button:hover{
+    box-shadow: -6px -5px #FCA311;
+    color: #FCA311;
+    transition: all 0.2s ease-in-out;
+}
+.inner button{
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    cursor:pointer;
+}
+
+
+.inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 90%;
+    border: 2px solid #ffffff;
+
+    display: grid;
+    grid-template-columns: 2% 20% 76% 2%;
+    grid-template-rows: 3% 15% 69% 10% 3%;
+}
+
+.fixed{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 2/ span 3;
+
+}
+
+
+.fixed #heading{
+    position: relative;
+    width: 100%;
+}
+.fixed #heading h1:hover{
+    letter-spacing: 0.8rem;
+    transition: all 0.4s ease-in-out;
+}
+.fixed #heading a{
+    text-decoration: none;
+}
+
+.fixed ul{
+    position: relative;
+    padding-top: 7vh;
+}
+.fixed ul li{
+    padding-bottom: 0.1vh;
+}
+.fixed .p-container{
+    width: 80%;
+}
+
+
+
+.fixed h1{
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+
+}
+.fixed h3{
+    font-family: 'Source Code Pro';
+    color: transparent;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: #FCA311;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    font-weight: lighter;
+    text-align: left;
+    line-height: 0;
+    transition: all 0.4s ease-in-out;
+    
+}
+.fixed h3:hover{
+    color: #FCA311;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.fixed p{
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: left;
+}
+.fixed p a{
+    text-decoration: none;
+}
+.fixed p span{
+    color: #FCA311;
+    transition: all 0.4s ease-in-out;
+}
+.fixed p span:hover{
+    letter-spacing: 0.2vw;
+    transition: all 0.4s ease-in-out;
+}
+
+
+
+.background_vid{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    grid-column: 3/4;
+    grid-row: 3/ span 1;
+
+    display: grid;
+    grid-template-rows: 5% 90% 5%;
+}
+.background_vid #recent{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    grid-row: 1/2;
+}
+.background_vid #recent h2{
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin: 0;
+
+    text-align: left;
+}
+
+.background_vid .vid_container{
+    height: 100%;
+    grid-row: 2/3;
+}
+.background_vid iframe {
+  /* optional */
+  width: 100%;
+  height: 100%; 
+}
+
+.background_vid .title{
+    position: absolute;
+    grid-row: 3/4;
+
+    bottom: 0;
+    left: 0;
+    padding: 0;
+}
+.background_vid .title h2{
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin: 0;
+
+    text-align: left;
+}
+.background_vid .title h2 span{
+    color: #FCA311;
+
+}
+
+
+
+
+
+
+
+
+
+
+.right{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 3fr 1fr;
+}
+
+.right ul{
+    grid-row: 1/2;
+    list-style: none;
+
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.right li{
+    padding-top: 2vh;
+}
+.right li i{  
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+.right li i:hover{  
+    color: #FCA311;
+    transition: all 0.2s ease-in-out;
+}
+
+.right #date{ 
+    grid-row: 2/3;
+    transform: rotate(-90deg); 
+}
+.right p{
+    font-family: 'Source Code Pro';
+    color: white;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+@keyframes shake {
+    0%{
+        transform: translate3d(0vw, 0, 0);
+    }
+    2.5%, 22.5% {
+      transform: translate3d(-0.1vw, 0, 0);
+    }
+    
+    5%, 20% {
+      transform: translate3d(0.2vw, 0, 0);
+    }
+  
+    7.5%, 12.5%, 17.5% {
+      transform: translate3d(-0.2vw, 0, 0);
+    }
+  
+    10%, 15% {
+      transform: translate3d(0.2vw, 0, 0);
+    }
+    90%{
+        transform: translate3d(0vw, 0, 0);
+    }
+    100%{
+        transform: translate3d(0vw, 0, 0);
+    }
+  }
+
+
+
+@media(max-width: 1250px){
+    .inner{      
+        height: 95%;
+        grid-template-columns: 4% 92% 4%;
+        grid-template-rows: 3% 7% 35% 52% 3%;
+    }
+    .inner .fixed{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .fixed #heading{
+        text-align: center;
+    }
+
+    .fixed h1{
+        font-size: 1.2rem;
+    }
+    .fixed ul{
+        position: relative;
+        padding-top: 1vh;
+    }
+    .fixed ul li{
+        padding-bottom: 0.05vh;
+    }
+
+    .fixed .p-container{
+        width: 100%;
+    }
+    .fixed p{
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+
+    .inner button{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+
+
+
+    .background_vid{
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+
+    .background_vid {    
+        grid-template-rows: 7% 80% 12%;
+        height: 100%;
+    }
+    .background_vid #recent h2{
+        font-size: 0.7rem;
+        letter-spacing: 0.3rem;
+    }
+    .background_vid .title h2{
+        font-size: 0.7rem;
+        letter-spacing: 0.3rem;
+    }
+
+
+   
+    
+    .right{
+        opacity: 0;
+    }
+}
+
+
+
+
+section{
+    position: absolute;
+    top: 100vh;
+    height: 800%;
+    width: 100%;
+    left: 0;
+}
+
+.content .h_wrapper{
+    position: relative;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.content h2{
+    font-family: 'Sitka Banner';
+    color: #5F6061;
+    font-size: 60px;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 57%;
+    line-height: 95%;
+}
+.content h2 span {
+    color: #DBDBDB;
+}
+
+
+#photo-container{
+    margin: 0 auto;
+    margin-top: -8%;
+    width: 80%;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.caption{
+    margin: 0 auto;
+    margin-top: 1.5%;
+    text-align: center;
+}
+.caption h1{
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.caption h1 span{
+    color: #FCA311;
+}
+
+.content .p_wrapper{
+    position: relative;
+    width: 48%;
+    margin: 0 auto;
+}
+.content p{
+    font-family: 'Sitka Banner';
+    color: #5F6061;
+    font-size: 39px;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 57%;
+    line-height: 120%;
+}
+.content p span {
+    color: #DBDBDB;
+}
+
+.content .container_sign{
+    margin-left: auto; 
+    margin-right: 0;
+    margin-top: -4%;
+    width: 20%;
+}
+.content .p_wrapper svg .sign1{
+    stroke: #ffffff;
+    stroke-width: 6px;
+    fill: transparent;
+    stroke-dasharray: 12500;
+    stroke-dashoffset: 12500;
+    animation: animate 2s cubic-bezier(.36,.07,.19,.97) forwards;
+}
+.content .p_wrapper svg .sign2{
+    stroke: #ffffff;
+    stroke-width: 6px;
+    fill: transparent;
+    stroke-dasharray: 12500;
+    stroke-dashoffset: 12500;
+    animation: animate 2s cubic-bezier(.36,.07,.19,.97) forwards;
+}
+.content .p_wrapper svg .sign3{
+    stroke: #ffffff;
+    stroke-width: 6px;
+    fill: transparent;
+    stroke-dasharray: 12500;
+    stroke-dashoffset: 12500;
+    animation: animate 3s cubic-bezier(.36,.07,.19,.97) forwards;
+}
+
+.content .p2_wrapper{
+    position: relative;
+    width: 30%;
+    margin: 0 auto;
+}
+.content .p2_wrapper p{
+    font-family: 'Nunito';
+    color: #7D7D7D;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.content .p2_wrapper p span{
+    color: #ffffff
+}
+.content #b_container{
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    cursor:pointer;
+}
+
+
+
+.content .vid_container{
+    background: #000;
+    position: relative;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    z-index: -99;
+}
+.content iframe {
+  /* optional */
+  width: 100%;
+  height: 100%; 
+}
+
+.content #album-container{
+    display: flex;
+    width: 100%;
+}
+.content #album-container a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content #album-container img{
+    width: 30%;
+    transition: all .2s ease-in-out;
+}
+.content #album-container img:hover{
+    transform: scale(1.1);
+}
+
+
+
+.content .slide_container{
+    position: relative;
+    width: 100%;
+    margin-top: 5%;
+    z-index: -1;
+}
+
+.mySlides {
+    display:none;
+}
+
+.content #pic_logo{
+    margin-top: -55%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    opacity: 80%;
+}
+
+.content .p-container{
+    width: 20%;
+    margin: 30% auto;
+}
+.content .p-container p{
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-align: left;
+}
+.content h3{
+    margin-top: -25%;
+    font-family: 'Source Code Pro';
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FCA311;
+    font-size: 4rem;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 0%;
+    transition: all 0.4s ease-in-out;
+}
+.content h3 span{
+    color: #ffffff;
+    -webkit-text-stroke-color: #ffffff;
+}
+.content h3:hover{
+    color: #FCA311;
+    transition: all 0.2s ease-in-out;
+}
+.content #mail{
+    text-decoration: none;
+}
+
+.p2-container{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.p2-container p{
+    display: inline-block;
+    font-family: 'Source Code Pro';
+    color: white;
+    font-size: 1rem;
+}
+.p2-container i{
+    padding-left: 50px;
+    color: white;
+    font-size: 2em;
+    transition: all 0.2s ease-in-out;
+}
+.p2-container i:hover{
+    color: #FCA311;
+    transition: all 0.2s ease-in-out;
+    
+}

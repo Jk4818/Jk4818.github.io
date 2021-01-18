@@ -1,0 +1,101 @@
+
+
+.content{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    grid-column: 3/4;
+    grid-row: 3/ span 1;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 30% 40%;
+}
+
+.content .p-container{
+    width: 50%;
+
+    grid-row: 1/2;
+}
+.content .p-container p{
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-align: left;
+}
+
+
+.content h3{
+    font-family: 'Source Code Pro';
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FCA311;
+    font-size: 4rem;
+    font-weight: lighter;
+    text-align: left;
+    line-height: 0%;
+    transition: all 0.4s ease-in-out;
+}
+.content h3 span{
+    color: #ffffff;
+    -webkit-text-stroke-color: #ffffff;
+}
+.content h3:hover{
+    color: #FCA311;
+    transition: all 0.2s ease-in-out;
+}
+.content #mail{
+    grid-row: 2/3;
+    text-decoration: none;
+}
+
+
+.p2-container{
+    grid-row: 3/4;
+    width: 45%;
+}
+.p2-container p{
+    display: inline-block;
+    font-family: 'Source Code Pro';
+    color: white;
+    font-size: 1rem;
+}
+.p2-container i{
+    padding-left: 50px;
+    color: white;
+    font-size: 2em;
+    transition: all 0.2s ease-in-out;
+}
+.p2-container i:hover{
+    color: #FCA311;
+    transition: all 0.2s ease-in-out;
+    
+}
+    
+
+@media(max-width: 1250px){
+
+    .content{
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+    .content .p-container{
+        width: 70%;
+    }    
+    .content .p-container p{
+        font-size: 1rem;
+    }
+    .content h3{
+        font-size: 1.6rem;
+    }
+        
+    .p2-container{
+        grid-row: 3/4;
+        width: 100%;
+    }
+    .p2-container i{
+        padding-left: 1.3rem;
+    }
+    
+}
