@@ -1,5 +1,9 @@
 //Scroll to top button
 var scrollToTopBtn = document.getElementById("scrollToTopBtn")
+var scrollToAboutBtn = document.getElementById("about_button")
+var scrollToContactBtn = document.getElementById("contact_button")
+var aboutpage = document.getElementById("about_page")
+var contactpage = document.getElementById("contact_page")
 var rootElement = document.documentElement
 
 function scrollToTop() {
@@ -11,6 +15,32 @@ function scrollToTop() {
 }
 scrollToTopBtn.addEventListener("click", scrollToTop)
 
+function scrollToAbout() {
+  aboutpage.scrollIntoView({
+    block: "center",
+    behavior: "smooth"
+  })
+}
+scrollToAboutBtn.addEventListener("click", scrollToAbout)
+
+function scrollToContact() {
+  contactpage.scrollIntoView({
+    block: "center",
+    behavior: "smooth"
+  })
+}
+scrollToContactBtn.addEventListener("click", scrollToContact)
+
+/*---MENU BUTTONS---*/
+var scrollToHomeMenu = document.getElementById("home_menu")
+scrollToHomeMenu.addEventListener("click", scrollToTop)
+var scrollToAboutMenu = document.getElementById("about_menu")
+scrollToAboutMenu.addEventListener("click", scrollToAbout)
+var scrollToContactMenu = document.getElementById("contact_menu")
+scrollToContactMenu.addEventListener("click", scrollToContact)
+
+
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,9 +49,10 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.create({
   trigger: ".h_wrapper",
   start: "-50px top", 
-  end: "6000vh top",
+  end: "4800px top",
   pin: "#nav",
   pinSpacing: false,
+  markers: true
 });
 
 
@@ -67,3 +98,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+
+/*---Mouse---*/
