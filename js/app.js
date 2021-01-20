@@ -1,3 +1,15 @@
+//MENU BUTTON UNCHECK
+var homeMenu = document.getElementById("home_menu")
+homeMenu.addEventListener("click", uncheck)
+var aboutMenu = document.getElementById("about_menu")
+aboutMenu.addEventListener("click", uncheck)
+var contactMenu = document.getElementById("contact_menu")
+contactMenu.addEventListener("click", uncheck)
+
+function uncheck() {
+  document.getElementById("circleMenu").checked = false;
+}
+
 //Scroll to top button
 var scrollToTopBtn = document.getElementById("scrollToTopBtn")
 var scrollToAboutBtn = document.getElementById("about_button")
@@ -47,9 +59,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 /*---PIN NAV---*/
 ScrollTrigger.create({
-  trigger: ".h_wrapper",
-  start: "-50px top", 
-  end: "4800px top",
+  trigger: "label",
+  start: "-20px top", 
+  endTrigger: 'footer',
+  end: "bottom top",
   pin: "#nav",
   pinSpacing: false,
   markers: true

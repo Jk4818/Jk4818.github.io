@@ -308,7 +308,7 @@ section{
 }
 
 .content h2{
-    font-family: 'Sitka Banner';
+    font-family: 'Times';
     color: #5F6061;
     font-size: 60px;
     font-weight: lighter;
@@ -354,7 +354,7 @@ img{
     margin: 0 auto;
 }
 .content p{
-    font-family: 'Sitka Banner';
+    font-family: 'Times';
     color: #5F6061;
     font-size: 39px;
     font-weight: lighter;
@@ -633,6 +633,10 @@ footer {
         opacity: 0 !important; 
     }
 
+    body,section{
+        
+        height: 400%;
+    }
     .content .h_wrapper{
         padding-top: 50px;
         margin-left: 5%;
@@ -669,5 +673,23 @@ footer {
         width: 70%;
         padding-top: 5%;
     }
+    .content .p-container{
+        max-width: 20em;
+    }
+    .content .p-container p{
+        text-align: center;
+    }
+    .content h3{
+        font-size: 2rem;
+    }
+    
+    .p2-container{
+        width: 100%;
+    }
+    .p2-container i{
+        padding-left: 20px;
+    }
+
+
     
 }
