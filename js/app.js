@@ -65,7 +65,6 @@ ScrollTrigger.create({
   end: "bottom top",
   pin: "#nav",
   pinSpacing: false,
-  markers: true
 });
 
 

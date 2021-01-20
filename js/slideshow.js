@@ -1,7 +1,8 @@
 var slideIndex = 0;
 carousel();
+vid_carousel();
 
-function carousel() {
+function vid_carousel() {
     var i;
     var x = document.getElementsByClassName("mySlides");
     for (i = 0; i < x.length; i++) {
@@ -10,7 +11,7 @@ function carousel() {
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1} 
     x[slideIndex-1].style.display = "block"; 
-    setTimeout(carousel, 10000); 
+    setTimeout(vid_carousel, 10000); 
 }
 
 function carousel() {
