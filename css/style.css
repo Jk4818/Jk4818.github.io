@@ -566,7 +566,7 @@ footer {
 }
 
 
-@media(max-width: 900px){
+@media(max-width: 1000px){
     .inner{      
         height: 95%;
         grid-template-columns: 4% 92% 4%;
@@ -635,7 +635,7 @@ footer {
 
     body,section{
         
-        height: 400%;
+        height: 100%;
     }
     .content .h_wrapper{
         padding-top: 50px;
@@ -658,7 +658,7 @@ footer {
         letter-spacing: 5px;
     }
     .content p{
-        font-size: 15px;
+        font-size: 20px;
     }
     .content .p2_wrapper{
         max-width: 19em;
