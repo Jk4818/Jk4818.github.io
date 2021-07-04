@@ -1,0 +1,213 @@
+html, body{
+    background-color: #E46C75;
+    overflow: hidden;
+} 
+#loader{
+    z-index:100;
+    background: #E46C75;
+}
+.inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 90%;
+    border: 3px solid #ffffff;
+
+    display: grid;
+    grid-template-columns: 2% 63% 33% 2%;
+    grid-template-rows: 3% 15% 69% 10% 3%;
+}
+
+#logo{
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: left;
+    align-content: flex-start;
+}
+#logo-item{
+    width: 100%;
+}
+#logo-item h1:hover{
+    letter-spacing: 0.8rem;
+    transition: all 0.4s ease-in-out;
+}
+#logo-item a{
+    text-decoration: none;
+    color: white;
+}
+#logo-item h1{
+    position: relative;
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+
+}
+
+
+.image-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+.image-container .mockup{
+    width: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+} 
+.image-container .mockup img{
+    width: 100%;
+    object-fit: contain;
+}
+.image-container .code{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.image-container .code img{
+    width: 90%;
+    object-fit: contain;
+    border-radius: 23px;
+}
+
+
+.content-container{
+    text-align: center;
+    color: white;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    width: 100%;
+    height: 100%;
+    padding-right: 3rem;
+    
+    grid-template-rows: 20% 10% 10% 60%;
+}
+.content-container .title {
+    grid-row: 1 / 2;
+}
+.content-container .title h2{
+    font-size: 1.75rem;
+    font-family: 'Merriweather', serif;
+    font-weight: lighter;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+}
+.content-container .line{
+    border: 2px solid white;
+    border-radius: 5px;
+    animation: fadeInLeft ease-in-out 1.5s;
+}
+.content-container .sub {
+    grid-row: 3 / 4;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-container .sub h3{
+    font-size: 0.75rem;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 0.5rem;
+}
+.content-container .content {
+    grid-row: 4 / 5;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.content-container .content p{
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    color: white;
+
+}
+
+.content span{
+    font-weight: bold;
+}
+
+@media(max-width: 1000px){
+    body{
+        margin-left: -0.5%;
+    }
+    .inner{
+        height: 95%;
+        grid-template-columns: 100%;
+        grid-template-rows: 3% 5% 45% 44% 3%;
+    }
+
+    #logo{
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        justify-content: center;
+        text-align: center;
+    }
+    .image-container{
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+    .content-container{
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+
+    .content-container .title h2{
+        font-size: 20px;
+        font-weight: lighter;
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
+    }
+    .content-container .line{
+        width: 90%;
+        border: 1px solid white;
+        border-radius: 1px;
+    }
+    .content-container .sub {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .content-container .sub h3{
+        font-size: 0.75rem;
+        font-weight: lighter;
+        letter-spacing: 0.5rem;
+    }
+    .content-container .content {
+        height: 50%;
+        width: 100%;
+        align-items: flex-end;
+    }
+    .content-container .content p{
+        font-size: 0.75rem;
+        letter-spacing: 0.05rem;
+        line-height: 1rem;
+    }
+
+    .image-container .code img{
+        width: 95%;
+        border-radius: 12px;
+    }
+    .right{
+        opacity: 0 !important; 
+        position: absolute;
+        left: 100000px;
+    }
+}
